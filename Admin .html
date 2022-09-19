@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: cursive;
+    background-image: url(120155095_2785110141710989_5553074351632202875_n.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+        }
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+    font-family: cursive;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 1450px;
+}
+        #books{
+            background-color:brown;
+        }
+#News {background-color: cadetblue;}
+#Contact {background-color:dodgerblue;}
+#About {background-color: orange;}
+        #problems{
+           
+            height: 235px;
+            width: 500px;
+             border: 4px solid white;
+             background-color: rgba(0,0,0,.5);
+            color: white;
+            font-size:25px;
+            padding: 15px;
+        }
+    textarea{
+           
+            height: 235px;
+            width: 500px;
+             border: 4px solid white;
+             background-color: rgba(0,0,0,.5);
+            color: white;
+            font-size:25px;
+            padding: 15px;
+        }
+        th{
+            text-align: left;
+            font-size: 20px;
+            color: black;
+        }
+        td{
+            font-size: 17px;
+        }
+        table,th,td{
+            border: 4px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
+        #delete{
+            text-align: center;
+            background-color: red;
+        }
+        h2{
+            color: black;
+            font-size: 50px;
+        }
+        li{
+            font-size: 30px;
+        }
+    </style>
+    <script>function openPage(pageName, elmnt, color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+    </script>
+    <body>
+<button class="tablink" onclick="openPage('books', this, 'brown')">Required Books</button>
+<button class="tablink" onclick="openPage('News', this, 'cadetblue')" id="defaultOpen">problems</button>
+<button class="tablink" onclick="openPage('Contact', this, 'dodgerblue')">Positions</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Deleted</button>
+
+<div id="books" class="tabcontent">
+    <form>
+<p><label style="cursor: pointer;">Add book</label></p>
+<p><img src="51SH9vHXgtL.jpg"  width="350" height="250" /></p>
+<p><label style="cursor: pointer;">Add book</label></p>
+<p><img src="Dead-Wake-The-Last-Crossing-Of-The-Lusitania.jpg" width="350" height="250"  /></p>
+<p><label style="cursor: pointer;">Add book</label></p>
+<p><img src="The-Emperor’s-Children-by-Claire-Messud.jpg"  width="350" height="250" /></p>
+<p><input type="file"  accept="image/*" name="image4" id="file4"  onchange="loadFile4(event)"  style="display: none;"></p>
+<p><label for="file4" style="cursor: pointer;">Add book</label></p>
+<p><img id="output4" width="350" height="250" /></p>
+<p><input type="file"  accept="image/*" name="image5" id="file5"  onchange="loadFile5(event)"  style="display: none;"></p>
+<p><label for="file5" style="cursor: pointer;">Add book</label></p>
+<p><img id="output5" width="350" height="250" /></p>
+    </form>
+<script>
+
+    var loadFile4 = function(event) {
+    var image4 = document.getElementById('output4');
+    image4.src = URL.createObjectURL(event.target.files[0]);
+};
+     var loadFile5 = function(event) {
+    var image5 = document.getElementById('output5');
+    image5.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+</div>
+
+<div id="News" class="tabcontent">
+  <p id="problems">There are a lot of books that we need to publish, and these books are required by the members, and on another page I showed you a group of those books</p>
+    <p id="problems">There is a complaint from many members that those responsible for responding to their problems are getting late and they are very miserable because of that. So I ask you to follow up on those responsible in order to speed up the performance of their work</p>
+    <p id="problems">We need to change the design of the page so that members do not get bored due to the stability of the design for a large period of time, such as changing the backgrounds or the way books are displayed.</p>
+   <p id="problems">Followers want to divide the books into different sections, such as novels, books for philosophy, books for science, books on natural phenomena, and so on. We also multiply books of stories for children.</p>
+    <textarea id="subject" name="subject" ></textarea>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Positon</th>
+    <th>Start date</th>
+  </tr>
+  <tr>
+    <td>Eman</td>
+    <td>Admin</td>
+    <td>20/10/2018</td>
+  </tr>
+  <tr>
+    <td>Omnia</td>
+    <td>Admin</td>
+    <td>25/10/2018</td>
+  </tr>
+      <tr>
+      <td>Engy</td>
+    <td>Admin</td>
+    <td>13/12/2019</td>
+      </tr>
+      <tr>
+      <td>Afraim</td>
+    <td>Admin</td>
+    <td>12/1/2020</td>
+      </tr>
+      <tr>
+      <td>Ahmed</td>
+    <td>Admin</td>
+    <td>5/3/2020</td>
+      </tr>
+      <tr>
+        <td>Mohamed</td>
+    <td>Admin</td>
+    <td>20/5/2020</td>  
+      </tr>
+       <tr>
+        <td>Amira</td>
+    <td>Member</td>
+    <td>3/5/2019</td>  
+      </tr>
+       <tr>
+        <td>Mahmoud</td>
+    <td>Member</td>
+    <td>3/7/2019</td>  
+      </tr>
+      <tr>
+        <td>Amir</td>
+    <td>Member</td>
+    <td>6/8/2019</td>  
+      </tr>
+      
+      <tr>
+        <td>Esraa</td>
+    <td>Member</td>
+    <td>8/8/2019</td>  
+      </tr>
+      <tr>
+      <td colspan="3" id="delete">
+          deleted</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Nada</td>
+    <td>Member</td>
+    <td>8/12/2019</td>  
+      </tr>
+      <tr>
+        <td>Yusuf</td>
+    <td>Member</td>
+    <td>5/1/2020</td>  
+      </tr>
+      <tr>
+      <td colspan="3" id="delete">
+          deleted</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Hend</td>
+    <td>Member</td>
+    <td>3/5/2020</td>  
+      </tr>
+      <tr>
+        <td>Mariam</td>
+    <td>Member</td>
+    <td>3/6/2020</td>  
+      </tr>
+      <tr>
+      <td colspan="3" id="delete">
+          deleted</td>
+      </tr>
+      <tr>
+        <td>Ibrahim</td>
+    <td>Member</td>
+    <td>7/6/2020</td>  
+      </tr>
+      <tr>
+        <td>Mina</td>
+    <td>Member</td>
+    <td>12/6/2020</td>  
+      </tr>
+      <tr>
+      <td colspan="3" id="delete">
+          deleted</td>
+      </tr>
+      <tr>
+     <tr>
+        <td>Nader</td>
+    <td>Member</td>
+    <td>30/6/2020</td>  
+      </tr> 
+      <tr>
+        <td>Salma</td>
+    <td>Member</td>
+    <td>1/7/2020</td>  
+      </tr>
+      <tr>
+        <td>Noha</td>
+    <td>Member</td>
+    <td>5/7/2020</td>  
+      </tr>
+      <tr>
+        <td>Salma</td>
+    <td>Member</td>
+    <td>8/8/2020</td>  
+      </tr>
+      <tr>
+          <tr>
+        <td>Mosa</td>
+    <td>Member</td>
+    <td>13/8/2020</td>  
+      </tr>
+      <tr>
+</table>
+</div>
+
+<div id="About" class="tabcontent">
+    <h2>Deleted members</h2>
+ <ol>
+    <li>Mera</li>
+     <br>
+     <li>Farah</li>
+     <br>
+     <li>Ayman</li>
+     <br>
+     <li>Zezo</li>
+     <br>
+    </ol>
+</div>
+    </body>
+    </head></html>

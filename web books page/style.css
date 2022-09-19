@@ -1,0 +1,98 @@
+.slider
+{
+    overflow: hidden;
+}
+.slider figure
+{
+    position: relative;
+    width:500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+.slider figure img
+{
+    float: left;
+    width: 20%;
+    color: rgba(0,0,0,-10);
+}
+@keyframes slider
+{
+    0%  {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+   25% {
+    left: -100%
+   }
+   45% {
+    left: -100%
+   }
+   50% {
+    left:-200%
+   }
+   70%{
+    left:-200%
+   }
+   75%{
+    left: -300%
+   }
+   100%{
+    left: -300%
+   }
+}
+.img1{
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,380%);
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size:12px;
+    background-image: url("book1.jpg");
+}
+.slider figure p
+{
+   text-align: center;
+   background-position: center;
+   color: #ddd;
+   font-family: heebo;
+   font-weight: bold;
+    font-size:70px;
+    transform: translate(-50%,70%);
+     position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.book
+{
+   margin: 10px;
+   padding: 10px;
+}
+.text1
+{
+	font-family: "Papyrus";
+	font-weight: bolder ;
+	font-size: 50px ;
+	letter-spacing: 5px ;
+	color: aliceblue ;
+	background-color: rgb(105, 56, 0); 
+	text-align: center;
+	
+}
+.text2
+{
+	font-family: "Dishonorable Mention";
+	font-size: 20px ;
+	color :antiquewhite ;
+	/*background-color :rgb(118, 99, 69); */
+	margin-bottom: 1px ;
+	background-color: rgb(105, 56, 0); 
+	text-align: center;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta charset="utf-8">
+        <title>E_BOOK</title>
+        <link rel="stylesheet" href="web.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                text-decoration: none;
+            }
+            body 
+            {
+                background-image: url('f4b4942c3d6c8e3b296da37e5e64521f.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                overflow: hidden;
+            }
+            .wel
+            {
+                font-size: 35px;
+                font-weight: bold;
+                font-family: cursive;
+                color: white;
+                text-align: center;
+                background: rgb(105, 56, 0);
+                text-transform: capitalize;
+                padding: 3px;
+            }
+            .sidebar 
+            {
+                position: fixed;
+                left: -250px;
+                width: 240px;
+                height: 100%;
+                background: rgb(105, 56, 0);
+                transition: all .5s ease;
+                top: 0px;
+            }
+            .sidebar header 
+            {
+                font-size: 22px;
+                color: white;
+                line-height: 55px;
+                text-align: center;
+                background: rgb(105, 56, 0);
+                user-select: none;
+            }
+            .sidebar ul a
+            {
+                display: block;
+                height: 100%;
+                width: 100%;
+                line-height: 65px;
+                font-size: 20px;
+                color: white;
+                padding-left: 40px;
+                box-sizing: border-box;
+                border-bottom: 1px solid black;
+                border-top: 1px solid rgba(255,255,255,.1);
+                transition: .4s;
+            }
+            ul li:hover a
+            {
+                padding-left: 50px;
+            }
+            .sidebar ul a i
+            {
+                margin-right: 16px;
+            }
+            #check
+            {
+                display: none;
+            }
+            label #btn,label #cancel    
+            {
+                position: absolute;
+                background: #042331;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            label #btn
+            {
+                left: 40px;
+                top: 4px;
+                font-size: 35px;
+                color: white;
+                padding: 6px 12px;
+                transition: all .5s;
+            }
+            label #cancel
+            {
+                z-index: 1111;
+                left: -195px;
+                top: 10px;
+                font-size: 30px;
+                color: #0a5275;
+                padding: 4px 9px;
+                transition: all .5s ease;
+            }
+            #check:checked ~ .sidebar
+            {
+                left: 0;
+            }
+            #check:checked ~ label #btn
+            {
+                left: 250px;
+                opacity: 0;
+                pointer-events: none;
+            }
+            #check:checked ~ label #cancel
+            {
+                left: 195px;
+            }
+            #check:checked ~ section
+            {
+                margin-left: 250px;
+            }
+            section
+            {
+                background: url(bg.jpeg) no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 100vh;
+                transition: all .4s;
+            }
+			
+            .script
+            {
+               font-style:italic; font-size:25px; background-nocolor;color:white;text-align:center;padding:10px0;
+                
+            }
+                    
+            .rights
+            {
+                font-style:italic; font-size:20px; background-color:#000000;color:white;border:2px solid ;text-align:center;padding:10px0;
+            }
+        </style>
+  </head>
+
+  <body>
+        <div class="wel">
+            <p>welcome to E-book library</p>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        </label>
+
+        <div class="sidebar">
+            <header>E _ BOOK</header>
+            <ul>
+                <li><a href="file:///C:/Users/M.Saleh/Desktop/page/main%20page%20000.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="file:///C:/Users/M.Saleh/Desktop/page/register.html"><i class="fas fa-book"></i>Rigester</a></li>
+                <li><a href="file:///C:/Users/M.Saleh/Desktop/page/login%20.html"><i class="fas  fa-sign-in-alt"></i>log in</a></li>
+                <li><a href="file:///C:/Users/M.Saleh/Desktop/page/support%20.html"><i class="far fa-envelope"></i>Contact us</a></li>
+                <li><a href="file:///C:/Users/M.Saleh/Desktop/page/about%20us%20.html"><i class="far fa-question-circle"></i>About us</a></li>
+            </ul>
+        </div>
+		<div class="img">
+			<img src ="book-are-my-life-animated-gif.gif" width="500" height="200">
+			<img src ="online_bookstore.gif" width="500" height="200">
+			<img src ="book-are-my-life-animated-gif.gif" width="522" height="200">
+		</div><br><br><br><br>
+        <p class="script">
+            E-book library is one of the largest online libraries in the world and we aim to make literature accessible to everyone. 
+            <br><br>
+            There is a great diversity of online libraries, and although they vary because of the type of content they host, they all contain resources and tools to make the most of them.
+            Technological advances have also benefited lovers of books and books, where there are many virtual libraries that not only allow you to read online where you write,
+            but you can download countless books, from novels, science fiction, poetry, academic reading and others. Best of all, many of them are free.
+            <br><br>
+            Here you can always find information relevant to the areas available for your area.
+            We strongly recommend creating an account in our library so that the system can automatically match the space available to you.
+        </p> 
+
+        
+		<br><br><br><br><br><br><br>
+        <div class="rights">  
+            copyright &copy; 2020 All Right Reserved 
+        </div>	
+
+        <section></section>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<html>
+  <head>
+		<title> E_Book </title>
+		<link rel="stylesheet" href="style.css"/> 
+		 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   </head>  
+   <body>
+		 <div class="wel">
+
+             <p>welcome to E-book library</p>
+
+         </div>
+ 
+ 
+ 
+        <input type="checkbox" id="check">
+
+         <label for="check">
+
+         <i class="fas fa-bars" id="btn"></i>
+
+         <i class="fas fa-times" id="cancel"></i>
+
+         </label>
+ 
+ 
+ 
+        <div class="sidebar">
+
+             <header>E _ BOOK</header>
+
+             <ul>
+
+                 <li><a href="file:///C:/Users/M.Saleh/Desktop/page/main%20page%20000.html"><i class="fas fa-home"></i>Home</a></li>
+
+                 <li><a href="file:///C:/Users/M.Saleh/Desktop/page/support%20.html"><i class="far fa-envelope"></i>Contact us</a></li>
+
+                 <li><a href="file:///C:/Users/M.Saleh/Desktop/page/about%20us%20.html"><i class="far fa-question-circle"></i>About us</a></li>
+
+             </ul>
+
+         </div>
+		<div class ="text1">EBOOK</div>
+		<div class ="text2">Free Library For Reading Books</div>
+		<div class="slider" >
+        <figure>
+			<img  src="book4.jpg" alt="books" title="books" height="250"/> 
+			<img src="book5.jpg" alt="books"title="books" height="256" />
+			<img src="book6.jpg" alt="books" title="books"height="250" />
+			<img src="book4.jpg" alt="books" title="books" height="250"/>
+        </figure>
+    </div>
+    <! ....image animation.... >
+      <style>
+		*{
+
+                 padding: 0;
+
+                 margin: 0;
+
+                 list-style: none;
+
+                 text-decoration: none;
+
+             }
+			 
+		 .wel
+
+             {
+
+                 font-size: 35px;
+
+                 font-weight: bold;
+
+                 font-family: cursive;
+
+                 color: white;
+
+                 text-align: center;
+
+                 background: #0b4f77;
+
+                 text-transform: capitalize;
+
+                 padding: 3px;
+
+             }
+
+             .sidebar
+
+             {
+
+                 position: fixed;
+
+                 left: -250px;
+
+                 width: 240px;
+
+                 height: 100%;
+
+                 background: #0b4f77;
+
+                 transition: all .5s ease;
+
+                 top: 0px;
+
+             }
+
+             .sidebar header
+
+             {
+
+                 font-size: 22px;
+
+                 color: white;
+
+                 line-height: 55px;
+
+                 text-align: center;
+
+                 background: #0b4f77;
+
+                 user-select: none;
+
+             }
+
+             .sidebar ul a
+
+             {
+
+                 display: block;
+
+                 height: 100%;
+
+                 width: 100%;
+
+                 line-height: 65px;
+
+                 font-size: 20px;
+
+                 color: white;
+
+                 padding-left: 40px;
+
+                 box-sizing: border-box;
+
+                 border-bottom: 1px solid black;
+
+                 border-top: 1px solid rgba(255,255,255,.1);
+
+                 transition: .4s;
+
+             }
+
+             ul li:hover a
+
+             {
+
+                 padding-left: 50px;
+
+             }
+
+             .sidebar ul a i
+
+             {
+
+                 margin-right: 16px;
+
+             }
+
+             #check
+
+             {
+
+                 display: none;
+
+             }
+
+             label #btn,label #cancel   
+
+             {
+
+                 position: absolute;
+
+                 background: #042331;
+
+                 border-radius: 3px;
+
+                 cursor: pointer;
+
+             }
+
+             label #btn
+
+             {
+
+                 left: 40px;
+
+                 top: 4px;
+
+                 font-size: 35px;
+
+                 color: white;
+
+                 padding: 6px 12px;
+
+                 transition: all .5s;
+
+             }
+
+             label #cancel
+
+             {
+
+                 z-index: 1111;
+
+                 left: -195px;
+
+                 top: 10px;
+
+                 font-size: 30px;
+
+                 color: #0a5275;
+
+                 padding: 4px 9px;
+
+                 transition: all .5s ease;
+
+             }
+
+             #check:checked ~ .sidebar
+
+             {
+
+                 left: 0;
+
+             }
+
+             #check:checked ~ label #btn
+
+             {
+
+                 left: 250px;
+
+                 opacity: 0;
+
+                 pointer-events: none;
+
+             }
+
+             #check:checked ~ label #cancel
+
+             {
+
+                 left: 195px;
+
+             }
+
+             #check:checked ~ section
+
+             {
+
+                 margin-left: 250px;
+
+             }
+
+             section
+
+             {
+
+                 background: url(bg.jpeg) no-repeat;
+
+                 background-position: center;
+
+                 background-size: cover;
+
+                 height: 100vh;
+
+                 transition: all .4s;
+
+             }	 
+        .textover{
+          position:relative;
+          width:300px;
+          height:300px;
+          float:left;
+          margin:25px;
+          padding:10px;
+          background-size:100%;
+          transition:0.5s;
+        }
+        .textover:hover{
+          background-size:110%;
+        }
+        .textover:after{
+          position:absolute;
+          top:100%;
+          left:0;
+          bottom:0;
+          right:0;
+          word-wrap:break-word;
+          overflow:hidden;
+          background-color:rgba(0,0,0,0.7);
+          color:#fff;
+          padding: 0 8px;
+          content:attr(data-text);
+          transition:0.5s;
+        }
+        .textover:hover:after{
+          top:0;
+          padding:8px;
+         background-color:rgba(0,0,0,0.7);
+        }
+		.mom{
+		font-style:italic; font-size:20px; background-color:#000000;color:white;border:2px solid ;text-align:center;padding:10px0;
+		}
+		
+      </style>
+		  <a href="https://manybooks.net/titles/the-frights-of-fiji" >
+		<div class="textover"
+		style=background-image:url('books1.jpg')
+			 data-text=" 'Your life will never be the same again, as magic will interfere' 
+			 Alyssa must defeat Master Beau if she ever wants to get home again. But Master Beau will stop at nothing, including using Alyssa’s friends, to ensure he is triumphant.....PUBLISHED IN:2018 ...BY:Sunayna Prasad">
+		</div>
+		  <a href="https://manybooks.net/titles/connellrother09most_dangerous_game.html" >
+		 <div class="textover"
+			  style=background-image:url('books2.jpg')
+			  data-text="A big-game hunter from New York is shipwrecked on an isolated island in the Caribbean, and is hunted by a Russian aristocrat.The story is an inversion of the big-game hunting safaris in Africa and South America that were fashionable among wealthy Americans in the 1920s........
+			 PUBLISHED IN:1924 ...BY:Joel Mccrea">
+		</div>
+		 <a href="https://manybooks.net/titles/the-red-diamond" >
+		 <div class="textover"
+			  style=background-image:url('books4.jpg')
+			  data-text="Charles is not your typical grandfather. As the chief wizard, he is not someone you can easily outwit. Will Iman be able to keep him in the dark about her relationship with Troy? What price is she going to pay for breaking the code? What mystical power does the red diamond hold?......PUBLISHED IN:2020 ..BY:Mark Schorr">
+		</div>
+		 <a href="https://manybooks.net/titles/hopeanthetext93zenda10.html">
+		 <div class="textover"
+			  style=background-image:url('books11.jpg')
+			  data-text="The Prisoner of Zenda is an 1894 adventure novel by Anthony Hope, in which the King of Ruritania is drugged on the eve of his coronation and thus is unable to attend the ceremony. Political forces within the realm are such that, in order for the king to retain the crown, his coronation must proceed. Fortuitously, an English gentleman on holiday in Ruritania who resembles the monarch is persuaded to act as his political decoy in an effort to save the unstable political situation of the interregnum.">
+		</div>
+		 <a href="https://www.adobe.com/be_en/active-use/pdf/Alice_in_Wonderland.pdf">
+		  <div class="textover"
+			   style=background-image:url('books13.jpg')
+			   data-text="The story Alice in Wonderland was published in 1865 by Charles Lutwidge Dodgson under the pseudonym of Lewis Carroll. Alice is evidently the protagonist of the story, a seven year girl who seeks out various answers and experiences on her journey. She begins this journey with a fall down a rabbit-hole whilst she is chasing a White Rabbit. She then ends up in Wonderland; a place where logic is seen to no longer apply and animals that Alice bumps into talk to her. The story is argued by some that, ‘Alice’s final goal is maturity, as Alice plays between being a child and striving to act like an adult in her various encounters in Wonderland">
+		</div>
+		  <a href="https://www.pdforigin.info/pillow-thoughts-pdf/">
+			<div class="textover"
+				 style=background-image:url('books14.jpg')
+				 data-text="A beautifully raw and poignant collection of poetry and prose, Pillow Thoughts III continues the series from poet Courtney Peppernell. Fix yourself a warm drink and settle into Peppernell's words as she pens a tribute to her readers who are bravely continuing their journey from hurt to healing.....PUBLISHED....BY:Courtney Peppernell">
+		</div>
+			<a href="https://www.kobo.com/us/en/ebook/in-the-heart-of-the-sea-the-tragedy-of-the-whaleship-essex">
+		  <div class="textover"
+			   style=background-image:url('books15.jpg')
+			   data-text="'In the Heart of the Sea'.... reveals the encounter's harrowing aftermath, as the ship's surviving crew is pushed to their limits and forced to do the unthinkable to stay alive. Braving storms, starvation, panic and despair, the men will call into question their deepest beliefs, from the value of their lives to the morality of their trade, as their captain searches for direction on the open sea and his first mate still seeks to bring the great whale down.">
+		</div>
+		  <a href="https://www.pdfdrive.com/an-army-at-dawn-the-war-in-north-africa-19421943-e189670286.html">
+			<div class="textover"
+				 style=background-image:url('books16.jpg')
+				 data-text="The liberation of Europe and the destruction of the Third Reich is an epic story of courage and calamity..But the confidence gained after several early victories soon wanes; casualties mount rapidly; battle plans prove ineffectual, and hope for a quick and decisive victory evaporates. The Allies discover that they are woefully unprepared to fight and win this war..here that an entire army learns what it will take to vanquish a formidable enemy...PUBLISHED IN:2002 ...BY:Rick Atkinson">
+		</div>
+			<a href="https://www.planetebook.com/free-ebooks/anne-of-green-gables.pdf">
+		  <div class="textover"
+			   style=background-image:url('books17.jpg')
+			   data-text="Anne is a talkative and happy girl despite living an impoverished life as an orphan. Though she lacks social graces and education, she has a rich and sophisticated fantasy life and an optimistic and generous spirit. Because Anne acts according to her instincts and not according to a code of manners, she unintentionally defies expectations of proper ladylike behavior.....PUBLISHED IN:1908 ...BY: Lucy Maud Montgomery">
+		</div>
+		  <a href="https://manybooks.net/titles/hugovictetext94lesms10.html">
+		  <div class="textover"
+			   style=background-image:url('books18.jpg')
+			   data-text="is a French historical novel by Victor Hugo, first published in 1862, that is considered one of the greatest novels of the 19th century. the novel follows the lives and interactions of several characters, particularly the struggles of ex-convict Jean Valjean and his experience of redemption.">
+		</div>
+		  <a href="https://verse.aasemoon.com/images/f/f5/The_Little_Prince.pdf">
+		  <div class="textover"
+			   style=background-image:url('books19.jpg')
+			   data-text="this is a book with great lessons for children. That teaches us to reflect on the values ​​of the people. Moreover, it not only ilustrates the different manifestations that humans have needs, but it shows how are you influencing the behavior of people, this is observed in all the characters involved and we can see reflected in each. It makes the book more influential in us.....PUBLISHED IN:1943. ...BY:  Antoine de Saint-Exupéry">
+		</div>
+		  <a href="https://www.researchgate.net/publication/264536636_The_northern_lights_-_a_guide">
+		  <div class="textover"
+			   style=background-image:url('books20.jpg')
+			   data-text=",is a young-adult fantasy novel by Philip Pullman, published in 1995 by Scholastic UK. Set in a parallel universe, it features the journey of Lyra Belacqua to the Arctic in search of her missing friend, Roger Parslow, and her imprisoned uncle, Lord Asriel, who has been conducting experiments with a mysterious substance known as Dust.">
+		</div>
+		  <a href="https://www.goodreads.com/book/show/68428.The_Final_Empire">
+		  <div class="textover"
+			   style=background-image:url('books21.jpg')
+			   data-text="The Final Empire, the first book in a trilogy by Brandon Sanderson, is a tale of a subjugated people known as the Skaa, and their fight for freedom against a seemingly invincible God known as the Lord Ruler. The Lord Ruler has ruled this world for a thousand years through his Inquisitors and Obligators. The Skaa who have been subjugated for so long are incapable of fighting back. That is until Kelsier a Mistborn who, along with his crew of Mistings and other talented individuals, begins a rebellion against the Lord Ruler and the Nobility. The Mistborn are a special people who are able to burn metals to illicit different responses">
+		</div>
+		  <a href="https://www.goodreads.com/book/show/41845372-happy">
+		   <div class="textover"
+				style=background-image:url('books22.jpg')
+				data-text=" ' We breathe deep and expand like the galaxy, We breathe out many thousands of stars, and if ever we start to feel panicky, this reminds us of just who we are.' The perfect soothing read for quiet time, Happy gently encourages young readers to explore their emotions and the beautiful world around them...this book was published by Nicola Edwards in September 2018">
+		</div>
+		   <a href="https://www.planetebook.com/free-ebooks/the-hound-of-the-baskervilles.pdf">
+		   <div class="textover"
+				style=background-image:url('books23.jpg')
+				data-text="The Hound of the Baskervilles opens with a mini mystery—Sherlock Holmes and Dr. Watson speculate on the identity of the owner of a cane that has been left in their office by an unknown visitor. Wowing Watson with his fabulous powers of observation, Holmes predicts the appearance of James Mortimer, owner of the found object and a convenient entrée into the baffling curse of the Baskervilles.">
+		</div>
+		   <a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxwYXBhd2FuYWNodXxneDo2ZmZlYjZjMGJiYTE5MGEz">
+		   <div class="textover"
+				style=background-image:url('books24.jpg')
+				data-text="It is a 1986 horror novel by American author Stephen King. The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself while hunting its prey. 'It' primarily appears in the form of Pennywise the Dancing Clown to attract its preferred prey of young children">
+		</div>
+		  
+		<!....end image animation ..>
+		
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="mom">  copyright &copy; 2020 All Right Reserved </div>
+   </body> 
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <style>
+        
+
+        .background{
+         background-image:url(f4b4942c3d6c8e3b296da37e5e64521f.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h3{
+            text-align: center;
+            font-family: cursive;
+            font-size: 30px;
+  color:white;
+        }
+        
+        .form{
+            width: 350px;
+            height: 470px;
+            position: absolute;
+            text-align:center;
+            padding: 40px;
+            top: 15%;
+            background:rgba(0,0,0,.8);
+                  box-shadow: 0 15px 25px rgba(0,0,0,.5);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        input
+        {
+           height: 35px;
+            width: 346px;
+            color: white;
+            border-bottom: 4px solid white;
+             background-color: rgba(0,0,0,.5);
+        }
+        .button{
+         height: 40px;
+            width: 150px;
+            color: black;
+            position: absolute;
+            text-align: center;
+            left: 32%;
+            font-size: 150%;
+            background-color:white;
+             border: 4px solid black;
+            border-radius: 20px;
+            top: 98%;
+        }
+        .words{
+            position: absolute;
+              text-align: center;
+            top:70%;
+           right: -500px;
+            font-size: 40xp;
+            font-family: cursive;
+        }
+        .words1{
+            position: absolute;
+              text-align: center;
+            top:80%;
+           right:-600px;
+            font-size: 40xp;
+            font-family: cursive;
+          
+        }
+        .words2{
+            position: absolute;
+              text-align: center;
+            top:90%;
+           right: -700px;
+            font-size: 40xp;
+          font-family: cursive;
+        }
+        #one,#th,#sec
+        {
+            color: white;
+        }
+        #text,#text2,#text3,#text4,#text5{
+            display: block;
+            color: red;
+            position: absolute;
+            text-align: left;
+            font-size: 2xp;
+            width: 6xp;
+            font-family: cursive;
+        }
+        
+    </style>
+    <script>
+       function validation(){
+            var form= document.getElementById("form");
+            var name=document.getElementById("name").value;
+            var name2=document.getElementById("name2").value;
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+            var password2=document.getElementById("password2").value;
+            var text=document.getElementById("text");
+            var text2=document.getElementById("text2");
+            var text3=document.getElementById("text3");
+            var text4=document.getElementById("text4");
+            var text5=document.getElementById("text5");
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            
+            if (name === '' || name == null) {
+   
+                text.innerHTML="please enter your first name";
+            
+				}
+            else{
+                text.innerHTML="";
+            }
+       if (name2 === '' || name2 == null) {
+    text2.innerHTML="please enter your last name";
+    
+			} 
+           else{
+               text2.innerHTML="";
+            } 
+             
+        if (password === '' || password== null) {
+   text4.innerHTML="please enter your password";
+            
+		}   
+      else if (password.length <= 6) {
+   text4.innerHTML="Password must be longer than 6 characters";
+         
+  }
+      else if (password.length >= 20) {
+   text4.innerHTML="Password must be less than 20 characters";
+        
+               
+			}
+            else{
+                text4.innerHTML="";
+            }
+          if (password2 === '' || password2== null) {
+   text5.innerHTML="please enter your password"; 
+              
+          }
+            
+         else if (password2 !== password) {
+    text5.innerHTML="invalid";
+           
+			} 
+			else{
+                text5.innerHTML="";
+        	
+				location.replace("file:///C:/Users/M.Saleh/Desktop/page/login%20.html");
+				alert("the page");
+				
+				
+            }
+             if (email === '' || email== null) {
+   text3.innerHTML="please enter your e-mail";
+                
+			}
+            else if(email.match(pattern))
+            {
+                text3.innerHTML="";
+                
+            }
+           else 
+                {
+                    text3.innerHTML="invalid";
+                   
+                } 
+				
+            
+        }
+            
+    </script>
+    </head>
+    <body class="background" >
+        <div id="error"></div>
+        <form class="form" id="form" name="form" onsubmit="validation()" action="#">
+             <h3>Register now!</h3>
+        <input type="text" placeholder="First Name" id="name" >
+            <br>
+        <span id="text"></span>
+        <br><br>
+        <input type="text" placeholder="Last Name" id="name2">
+            <br>
+            <span id="text2"></span>
+            <br><br>
+        <input type="text" placeholder="Your E-Mail" id="email">
+            <br>
+            <span id="text3"></span>
+            <br><br>
+        <input type=password placeholder="Password" id="password">
+            <br>
+            <span id="text4"></span>
+            <br><br>
+        <input type="password" placeholder="Confirm Password" id="password2">
+            <br>
+            <span id="text5"></span>
+            <br><br>
+            
+             <button type="submit" class="button">Submit</button>
+            <div class="words"><h3 id="one">let's get lost</h3></div>
+            <div class="words1"><h3 id="sec">in a world </h3></div>
+            <div class="words2"><h3 id="th">of books</h3></div>
+            
+        </form>
+        
+    </body>
+</html>
+
+
+

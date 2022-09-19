@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+	<title> E_Book</title>
+    <style>
+        
+
+        .background{
+         background-image:url(f4b4942c3d6c8e3b296da37e5e64521f.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h3{
+            text-align: center;
+            font-family: cursive;
+            font-size: 30px;
+  color:white;
+        }
+        
+        .form{
+            width: 350px;
+            height: 280px;
+            position: absolute;
+            text-align:center;
+            padding: 30px;
+            top: 25%;
+            background:rgba(0,0,0,.8);
+                  box-shadow: 0 15px 25px rgba(0,0,0,.5);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        input
+        {
+           height: 35px;
+            width: 346px;
+            color: white;
+            border-bottom: 4px solid white;
+             background-color: rgba(0,0,0,.5);
+        }
+        .button{
+         height: 40px;
+            width: 150px;
+            color: black;
+            position: absolute;
+            text-align: center;
+            left: 32%;
+            font-size: 150%;
+            background-color:white;
+             border: 4px solid black;
+            border-radius: 20px;
+            top: 93%;
+        }
+        .words{
+            position: absolute;
+              text-align: center;
+            top:90%;
+           right: -600px;
+            font-size: 40xp;
+            font-family: cursive;
+        }
+        .words1{
+            position: absolute;
+              text-align: center;
+            top:100%;
+           right:-700px;
+            font-size: 40xp;
+            font-family: cursive;
+          
+        }
+        #one,#sec
+        {
+            color: white;
+        }
+        
+    </style>
+    <script type="text/javascript"> 
+        function validateForm() {
+        var valid = true;
+
+        if(document.inputForm.email.value==""){
+        alert("Email is empty");
+        document.inputForm.email.focus();
+        valid=false; }
+        else if(document.inputForm.email.value!=""){
+        if(document.inputForm.email.value.indexOf("@")==-1||document.inputForm.email.value.indexOf(".")==-1){
+        alert("Please Enter valid email, @gmail.com");
+        document.inputForm.email.focus();
+        valid=false; }
+        }
+		
+		
+		
+        if(document.inputForm.password.value==""){
+        alert("password is empty");
+        document.inputForm.password.focus();
+        valid=false; }
+		
+         else if(document.inputForm.email.value=="mosaleh@gmail.com"&&document.inputForm.password.value=="1234")
+         {
+          location.replace("file:///C:/Users/M.Saleh/Desktop/page/Admin%20.html");
+          alert("the admin page");
+         
+         }
+		 else if(document.inputForm.email.value!=""&&document.inputForm.password.value!="")
+         
+		 {
+		 if(document.inputForm.email.value.indexOf("@")==-1||document.inputForm.email.value.indexOf(".")==-1){
+         document.inputForm.email.focus();
+        valid=false; }
+		else{
+		 location.replace("file:///C:/Users/M.Saleh/Desktop/page/web%20books%20page/web.html");
+          alert("the page");
+         
+		 }
+		 
+		 }
+        return valid;
+
+ 
+
+        } </script>
+    </head>
+    <body class="background" >
+	
+        
+		</div>
+        <div id="error"></div>
+        <form class="form" id="form"  action="#" name="inputForm" onSubmit="return validateForm()">>
+             <h3>Login</h3>
+            <div class="inputbox">
+        <input type="text" placeholder="Your E-Mail" id="email">
+            <br>
+            <span id="text3"></span>
+            <br><br>
+        <input type=password placeholder="Password" id="password">
+            <br>
+            <span id="text4"></span>
+            </div>
+			
+            <button type="submit" class="button">Log in</button>
+            <div class="words"><h3 id="one">Welcome to our</h3></div>
+            <div class="words1"><h3 id="sec">library </h3></div>
+            
+        </form>
+        
+    </body>
+</html>
